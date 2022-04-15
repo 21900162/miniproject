@@ -11,3 +11,4 @@ typedef struct product{
 
 int createPr(Product* m);//제품 추가
 void readPr(Product m);//제품 하나 출력함수
+void updatePr(Product* m);//제품 수정함수

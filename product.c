@@ -29,5 +29,22 @@ void readPr(Product m){
  if(m.delivery == 2) printf("택배배송\n");
 }
 
+void updatePr(Product* m){
+ getchar();
+ printf("제품명: ");
+ scanf("%[^\n]s", m->name);
+ getchar();
+ printf("제품 설명: ");
+ scanf("%[^\n]s", m->info);
+ printf("제품 가격: ");
+ scanf("%d", &m->price);
+ printf("판매 단위: ");
+ getchar();
+ scanf("%[^\n]s", m->weight);
+ printf("배송 방법(1:새벽배송 /2.택배배송): ");
+ getchar();
+ scanf("%d", &m->delivery);
+ printf("수정되었습니다!\n");
+}
 
 
