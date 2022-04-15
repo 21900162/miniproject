@@ -47,4 +47,8 @@ void updatePr(Product* m){
  printf("수정되었습니다!\n");
 }
 
+void deletePr(Product * m){
 
+ m-> price =-1;
+ printf("삭제되었습니다\n");
+}
