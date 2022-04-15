@@ -89,3 +89,21 @@ void searchName(Product * m, int index){
  printf("\n");
 }
 
+void searchPrice(Product * m, int index){
+ int price=0;
+ int check=0;
+ printf("검색할 가격? ");
+ scanf("%d", &price);
+ for(int i=0; i<index; i++){
+ if(m[i].price == -1) continue;
+ if(m[i].price == price){
+ printf("\n%d번\n", i+1);
+ readPr(m[i]);
+ check++;
+ }
+ }
+ if(check==0) printf("검색된 데이터 없음");
+ printf("\n");
+}
+
+
