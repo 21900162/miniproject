@@ -9,3 +9,5 @@ int loadfile(Product * m);//파일 불러오기 함수
 void savefile(Product * m, int index);//파일 저장함수
 void searchName(Product * m, int index);//제품명 검색함수
 void searchPrice(Product * m, int index);//가격 검색함수
+void searchWeight(Product *m, int index);//판매단위  검색함수
+
