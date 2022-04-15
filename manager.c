@@ -16,3 +16,21 @@ int selectmenu(){
  scanf("%d", &select);
  return select;
 }
+
+void listPr(Product *m, int index){
+ for(int i=0; i<index; i++){
+ if(m[i].price == -1) continue;
+ printf("\n%d번 \n",i+1);
+ readPr(m[i]);
+ }
+}
+
+int selectPr(Product * m, int index){
+ int no=0;
+ listPr(m, index);
+ printf("________________\n");
+ printf("번호는? ");
+ scanf("%d", &no);
+ return no;
+}
+
