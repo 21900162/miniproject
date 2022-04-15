@@ -34,3 +34,28 @@ int selectPr(Product * m, int index){
  return no;
 }
 
+int loadfile(Product * m){
+ int count=0;
+ char buff[100];
+ FILE * fp;
+ fp = fopen("product.txt", "rt");
+ if(fp == NULL){
+ printf("파일 없음\n");
+ }
+ else{
+ for(int i=0; i<100; i++){
+ fscanf(fp, "%[^\n]s", m[i].name);
+ if(feof(fp)) break;
+ fgetc(fp);
+ fscanf(fp, "%[^\n]s", m[i].weight);
+ fgetc(fp);
+ fscanf(fp, "%[^\n]s", m[i].info);
+ fscanf(fp, "%d", &m[i].price);
+ fscanf(fp, "%d", &m[i].delivery);
+ count ++;
+ }
+ fclose(fp);
+ printf("로딩 성공!\n");
+ }
+ return count;
+}
