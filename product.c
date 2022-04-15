@@ -19,3 +19,15 @@ int createPr(Product *m){
  printf("추가되었습니다!\n");
  return 1;
 }
+
+void readPr(Product m){
+ printf("%s ", m.name);
+ printf("%s\n", m.weight);
+ printf("%s\n", m.info);
+ printf("%d원\n", m.price);
+ if(m.delivery == 1) printf("새벽배송\n");
+ if(m.delivery == 2) printf("택배배송\n");
+}
+
+
+

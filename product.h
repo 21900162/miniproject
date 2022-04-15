@@ -10,3 +10,4 @@ typedef struct product{
 }Product;
 
 int createPr(Product* m);//제품 추가
+void readPr(Product m);//제품 하나 출력함수
