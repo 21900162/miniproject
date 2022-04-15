@@ -72,4 +72,20 @@ m[i].delivery);
  printf("저장됨!\n");
 }
 
+void searchName(Product * m, int index){
+ char name[20];
+ int check=0;
+ printf("검색할 이름? ");
+ scanf("%s", name);
+ for(int i=0; i<index; i++){
+ if(m[i].price == -1) continue;
+ if(strstr(m[i].name, name)){
+ printf("\n%d번\n", i+1);
+ readPr(m[i]);
+ check++;
+ }
+ }
+ if(check==0) printf("검색된 데이터 없음");
+ printf("\n");
+}
 
