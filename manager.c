@@ -59,3 +59,17 @@ int loadfile(Product * m){
  }
  return count;
 }
+
+void savefile(Product * m, int index){
+ FILE *fp;
+ fp = fopen("product.txt", "wt");
+ for(int i=0; i<index; i++){
+ if(m[i].price == -1) continue;
+ fprintf(fp, "%s\n%s\n%s\n%d %d", m[i].name, m[i].weight, m[i].info, m[i].price,
+m[i].delivery);
+ }
+ fclose(fp);
+ printf("저장됨!\n");
+}
+
+
